@@ -10,7 +10,7 @@ export const initSocket = (server) => {
     }
   });
 
-  io.on("connection", (socket) => {
+  io.on("connection ", (socket) => {
     console.log("User connected:", socket.id);
     handleRoomSocket(io, socket);
   });

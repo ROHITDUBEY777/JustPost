@@ -23,7 +23,7 @@ export const handleRoomSocket = (io, socket) => {
     socket.join(roomId);
     socket.to(roomId).emit("user-joined");
 
-    // WebRTC Signaling
+    // Webdpckrt Signaling
     socket.on("offer", (data) => {
       socket.to(roomId).emit("offer", data);
     });

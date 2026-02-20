@@ -47,8 +47,15 @@ const steps = [
     num: "03",
     icon: Download,
     title: "Direct Transfer",
-    desc: "Files transfer encrypted, peer-to-peer.",
+    desc: "Files transfer encrypted,",
   },
+  {
+    num: "04",
+    icon: Download,
+    title: "E2E",
+    desc: "End to End File Transfer , ",
+  },
+  
 ];
 
 const Index = () => {
@@ -102,12 +109,12 @@ const Index = () => {
         <div className="container max-w-6xl mx-auto px-4 py-20 md:py-28 relative text-center">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
             Transfer files
-            <span className="block text-accent">peer-to-peer.</span>
+            {/* <span className="block text-accent">peer-to-peer.</span> */}
             <span className="block">Securely.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/70 mb-10 max-w-xl mx-auto">
-            Share a room link. Connect instantly. Files go directly between devices —
+            Share a room link. Connect instantly. Files go directly between devices - 
             encrypted, no storage.
           </p>
 

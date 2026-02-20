@@ -36,7 +36,7 @@ const StatusBadge = ({ status }: { status: string }) => {
     connected: { label: "Connected", icon: Wifi, className: "bg-success/10 text-success border-success/30" },
     transferring: { label: "Transferring…", icon: Loader2, className: "bg-transfer/10 text-transfer border-transfer/30" },
     done: { label: "Transfer complete!", icon: Check, className: "bg-success/10 text-success border-success/30" },
-    error: { label: "Connection error", icon: WifiOff, className: "bg-destructive/10 text-destructive border-destructive/20" },
+    error: { label: "Connection Lost", icon: WifiOff, className: "bg-destructive/10 text-destructive border-destructive/20" },
   };
   const cfg = configs[status] ?? configs.idle;
   const Icon = cfg.icon;
@@ -279,7 +279,8 @@ const SendRoom = () => {
                     <><Loader2 className="w-4 h-4 animate-spin" /> Waiting for receiver…</>
                   ) : (
                     <><SendHorizontal className="w-4 h-4" /> Send Files</>
-                  )}
+                    
+                  ) }
                 </Button>
 
                 {status === "waiting" && (
@@ -294,8 +295,13 @@ const SendRoom = () => {
                   </div>
                 )}
               </CardContent>
+              
+            
             </Card>
+            
           </div>
+          
+          
         </div>
       </div>
     </div>
