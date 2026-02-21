@@ -63,7 +63,7 @@ const Index = () => {
 
   const handleCreateRoom = async () => {
     try {
-      const res = await fetch("https://justpost-151e.onrender.com/api/create-room", {
+      const res = await fetch("http://localhost:5000/api/create-room", {
         method: "POST",
       });
 
